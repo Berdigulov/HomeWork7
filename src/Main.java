@@ -6,7 +6,9 @@ public class Main {
         Medic medic = new Medic(170, 20, "Healing allies",30);
         Heroes heroes [] = new Heroes[]{warrior, medic, magic};
         for (int i = 0; i < heroes.length; i++) {
-
+            warrior.applySuperAbility();
+            magic.applySuperAbility();
+            medic.applySuperAbility();
             medic.increaseExperience();
             break;
 
