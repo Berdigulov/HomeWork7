@@ -1,28 +1,27 @@
 public class Medic extends Heroes{
 
-    private int healthPoints;
+    private int healPoints;
 
     public Medic(int health, int damage, String typeOfAbility, int healthPoints) {
         super(health, damage, typeOfAbility);
-        this.healthPoints = healthPoints;
+        this.healPoints = healthPoints;
     }
 
     public int getHealthPoints() {
-        return healthPoints;
+        return healPoints;
     }
 
     public void setHealthPoints(int healthPoints) {
-        this.healthPoints = healthPoints;
+        this.healPoints = healthPoints;
     }
 
-    public void increaseExperience (){
-        if (this.healthPoints >= 30){
-            this.healthPoints = this.healthPoints + 3;
-        }
+    public String increaseExperience (){
+        double tenPercent = (((10 * healPoints) / 100) + healPoints);
+        return "Heal Points: " + healPoints + " get bigger and became: " + tenPercent;
 
     }
-    public void info(){
-        System.out.println(getHealth() + " " + getDamage() + " " + getTypeOfAbility() + " " + getHealthPoints());
+    public String info(){
+        return getHealth() + " " + getDamage() + " " + getTypeOfAbility() + " " + getHealthPoints();
     }
 
 

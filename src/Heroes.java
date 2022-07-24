@@ -34,7 +34,7 @@ public abstract class Heroes implements HavingSuperAbility {
     }
 
 
-public void info(){
-    System.out.println(getHealth() + " " + getDamage() + " " + getTypeOfAbility());
+public String info(){
+    return getHealth() + " " + getDamage() + " " + getTypeOfAbility();
 }
 }
